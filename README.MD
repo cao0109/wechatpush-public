@@ -59,6 +59,7 @@
 ### 项目配置
 
 - 将申请好的各种信息填入配置文件即可
+- cityCode可在cityCode.md文件中获取
 
 ```properties
 #wechat
@@ -77,7 +78,7 @@ apiKey=
 
 ![](https://caoh2-images-1308318435.cos.ap-beijing.myqcloud.com/img/Snipaste_2022-08-23_14-17-42.png)
 
-> 上传jar包到服务器并且运行
+> 上传jar包到服务器并且运行（服务器需自行购买，腾讯云阿里云新用户可以试用）
 
 ```sh
 #运行命令/后台运行
