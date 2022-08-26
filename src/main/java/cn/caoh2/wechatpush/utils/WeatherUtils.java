@@ -20,7 +20,7 @@ public class WeatherUtils {
     public Weather getWeather() {
         RestTemplate restTemplate = new RestTemplate();
         Map<String, String> map = new HashMap<>();
-        map.put("district_id", wechatConfig.CITY_CODE); // 行政代码
+        map.put("district_id", wechatConfig.CITY_CODE.get(0)); // 行政代码
         map.put("data_type", "all");//这个是数据类型
         map.put("ak", wechatConfig.BAIDU_AK);
         String res = restTemplate.getForObject("https://api.map.baidu.com/weather/v1/?district_id={district_id}&data_type={data_type}&ak={ak}", String.class, map);

@@ -72,7 +72,18 @@ baiduAK=
 cityCode=
 #APIKEY
 apiKey=
+
+#注意日期格式必须为xxxx-xx-xx
+anniversary=xxxx-xx-xx
+boyBirthday=xxxx-xx-xx
+girlBirthday=xxxx-xx-xx
 ```
+
+
+
+### *新增纪念日♥♥♥模块*
+
+![](https://caoh2-images-1308318435.cos.ap-beijing.myqcloud.com/img/Snipaste_2022-08-26_21-09-08.png)
 
 ## 3. 部署
 

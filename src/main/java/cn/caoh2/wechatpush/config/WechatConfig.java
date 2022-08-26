@@ -26,10 +26,17 @@ public class WechatConfig {
     public String BAIDU_AK;
 
     @Value("${cityCode}")
-    public String CITY_CODE;
+    public List<String> CITY_CODE;
 
     @Value("${apiKey}")
     public String API_AK;
 
+    @Value("${anniversary}")
+    public String ANNIVERSARY;
 
+    @Value("${boyBirthday}")
+    public String BOY_BIRTHDAY;
+
+    @Value("${girlBirthday}")
+    public String GIRL_BIRTHDAY;
 }

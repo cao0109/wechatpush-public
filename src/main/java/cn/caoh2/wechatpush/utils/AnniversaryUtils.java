@@ -1,30 +1,42 @@
 package cn.caoh2.wechatpush.utils;
 
+import cn.caoh2.wechatpush.config.WechatConfig;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-
+/**
+ * 纪念日工具类
+ *
+ * @author caoh2
+ * @version 2.0
+ */
 @Component
-public class JiNianRiUtils {
+public class AnniversaryUtils {
 
-    public static int getLianAi(){
-        return calculationLianAi("2021-11-06");
+    @Resource
+    private WechatConfig wechatConfig;
+
+    public int getLianAi() {
+        return calculationLianAi(wechatConfig.ANNIVERSARY);
     }
-    public static int getBirthday_Jo(){
+
+    public int getBirthday_Boy() {
         try {
-            return calculationBirthday("2001-11-16");
+            return calculationBirthday(wechatConfig.BOY_BIRTHDAY);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         return 0;
     }
-    public static int getBirthday_Hui(){
+
+    public int getBirthday_Girl() {
         try {
-            return calculationBirthday("2000-09-11");
+            return calculationBirthday(wechatConfig.GIRL_BIRTHDAY);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -32,7 +44,7 @@ public class JiNianRiUtils {
     }
 
 
-    public static int calculationBirthday(String clidate) throws ParseException {
+    public int calculationBirthday(String clidate) throws ParseException {
         SimpleDateFormat myFormatter = new SimpleDateFormat("yyyy-MM-dd");
         Calendar cToday = Calendar.getInstance(); // 存今天
         Calendar cBirth = Calendar.getInstance(); // 存生日
@@ -55,7 +67,7 @@ public class JiNianRiUtils {
         }
     }
 
-    public static int calculationLianAi(String date) {
+    public int calculationLianAi(String date) {
         DateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         int day = 0;
         try {
